@@ -36,6 +36,8 @@ const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
     origin: "https://chat-app-tawny-delta.vercel.app",
+     credentials:true,            
+    optionSuccessStatus:200
   },
 });
 io.on('connection', (socket) => {
