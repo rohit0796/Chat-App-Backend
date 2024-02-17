@@ -7,7 +7,7 @@ require('dotenv').config()
 const urlrouter = require('./routes');
 
 app.use(cors(
-  { origin:'https://chat-app-tawny-delta.vercel.app',
+  { origin:'https://chat-app-rohit0796.vercel.app',
    credentials:true,            
     optionSuccessStatus:200
   }));
@@ -35,7 +35,7 @@ const server = app.listen(PORT, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://chat-app-tawny-delta.vercel.app",
+    origin: "https://chat-app-rohit0796.vercel.app",
   },
 });
 io.on('connection', (socket) => {
