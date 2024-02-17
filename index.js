@@ -7,9 +7,7 @@ require('dotenv').config()
 const urlrouter = require('./routes');
 
 app.use(cors(
-  origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
+  origin:'http://localhost:3000',
 ));
 
 app.use(express.json());
