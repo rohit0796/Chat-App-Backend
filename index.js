@@ -36,9 +36,11 @@ const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
     origin: "https://chat-app-tawny-delta.vercel.app",
-     credentials:true,            
-    optionSuccessStatus:200
-  },
+     methods: ["GET", "POST"],
+                credentials: true,
+                transports: ['websocket', 'polling'],
+        },
+        allowEIO3: true
 });
 io.on('connection', (socket) => {
   console.log("connected to io");
